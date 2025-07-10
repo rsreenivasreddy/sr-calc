@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Generic.Math" Version="1.0.2" />
+    <PackageReference Include="LoveCalculator" Version="1.0.4" />
+  </ItemGroup>
+
 </Project>

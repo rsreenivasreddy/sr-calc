@@ -1,4 +1,6 @@
-﻿namespace SrCalc
+﻿
+using LoveCalculator;
+namespace SrCalc
 {
     public class SRCalc
     {
@@ -8,6 +10,8 @@
         }
         public int Substract(int i, int j)
         {
+            LoveCalculator.Calculators.PersonCalculator personCalculator = new LoveCalculator.Calculators.PersonCalculator();
+            personCalculator.AgeDifference();
             return i - j;
         }
     }
