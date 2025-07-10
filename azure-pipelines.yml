@@ -34,13 +34,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   displayName: 'Create Nuget package'
   inputs:
     command: 'pack'
     packagesToPack: '**/$(nugetProjectName).csproj'
     versioningScheme: 'byEnvVar'
-    packDestination: '$(Build.ArtifactStagingDirectory)'
+    outputDir: '$(Build.ArtifactStagingDirectory)/nuget'
     versionEnvVar: 'nugetVersion'
     
-
